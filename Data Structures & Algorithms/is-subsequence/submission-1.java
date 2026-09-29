@@ -1,0 +1,16 @@
+class Solution {
+    public boolean isSubsequence(String s, String t) {
+        return helper(s, t, 0, 0);
+    }
+
+    private boolean helper(String s, String t, int i, int j){
+        if(i >= s.length()) return true;
+        if(j >= t.length()) return false;
+
+        if(t.charAt(j) == s.charAt(i)){
+            return helper(s, t, i+1, j+1);
+        } else {
+            return helper(s, t, i, j+1);
+        }
+    }
+}
