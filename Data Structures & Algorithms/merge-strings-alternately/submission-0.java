@@ -1,0 +1,18 @@
+class Solution {
+    public String mergeAlternately(String word1, String word2) {
+        int pt1 = 0, pt2 = 0;
+        StringBuilder sb = new StringBuilder();
+
+        while(pt1 < word1.length() || pt2 < word2.length()){
+            if(pt1 < word1.length()){
+                sb.append(word1.charAt(pt1));
+                pt1++;
+            }
+            if(pt2 < word2.length()){
+                sb.append(word2.charAt(pt2));
+                pt2++;
+            }
+        }
+        return sb.toString();
+    }
+}
